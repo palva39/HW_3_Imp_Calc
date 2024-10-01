@@ -25,3 +25,7 @@ class Calculator:
         result = a / b
         Calculator.history.append((a, b, '/', result))
         return result
+    
+    @classmethod
+    def last_calculation(cls):
+        return cls.history[-1] if cls.history else None
