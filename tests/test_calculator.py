@@ -37,7 +37,7 @@ def clean_history():
     '''Tests the clean history'''
     Calculator.history.clear()
 
-def test_history(clean_history):
+def test_history(clean_history): # pylint: disable=unused-argument
     '''Test the calculation history functionality.'''
     Calculator.add(2, 2)
     assert Calculator.last_calculation() == (2, 2, '+', 4)
