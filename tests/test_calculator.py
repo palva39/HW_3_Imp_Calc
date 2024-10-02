@@ -33,7 +33,7 @@ def test_last_calculation():
     assert Calculator.last_calculation() == (5, 7, '+', 12)
 
 @pytest.fixture
-def clean_history():
+def clean_history(): # pylint: disable=redefined-outer-name
     '''Tests the clean history'''
     Calculator.history.clear()
 
